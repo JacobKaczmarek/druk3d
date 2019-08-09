@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <img class="hero" src="../assets/images/Hero.svg" alt />
-    <h1>Druk 3d na który cie stać</h1>
+    <h1>Druk 3D na który cie stać</h1>
     <h3>Realizuj pomysły nie płacąc fortuny.</h3>
     <button class="offer-btn">Sprawdz oferte</button>
   </div>
@@ -28,20 +28,23 @@ export default {
 
 h1 {
   font-weight: normal;
-  margin-top: 40px;
+  font-size: 35px;
+  margin-top: 60px;
 }
 
 h3 {
   color: #363636;
   font-weight: normal;
-  margin-top: 15px;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .offer-btn {
-  font-size: 28px;
+  font-size: 23px;
   color: white;
   background: #51c4f5;
-  margin: 50px;
-  padding: 15px 20px;
+  margin: 80px;
+  padding: 10px 20px;
+  border: none;
 }
 </style>

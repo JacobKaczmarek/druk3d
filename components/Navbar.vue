@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <nav>
-      <div class="logo">Logo</div>
+      <div class="logo">
+        <span>Druk3D</span>
+        <img src="~/assets/images/Logo.svg" alt="Logo" />
+      </div>
       <ul>
         <li>
           <a href>Oferta</a>
@@ -37,7 +40,16 @@ nav {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
   margin: 35px;
+  font-size: 20px;
+}
+
+.logo > img {
+  margin: 5px;
+  width: 25px;
 }
 
 ul {
@@ -49,6 +61,7 @@ ul {
 
 li {
   margin: 35px;
+  font-size: 20px;
 }
 
 a {
