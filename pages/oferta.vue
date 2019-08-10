@@ -50,7 +50,7 @@ ul {
 
 .wave {
   position: absolute;
-  bottom: -40px;
+  bottom: -60px;
   left: 0;
   width: 100vw;
 }

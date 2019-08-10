@@ -10,7 +10,7 @@
           <nuxt-link to="oferta">Oferta</nuxt-link>
         </li>
         <li>
-          <a href>Realizacje</a>
+          <nuxt-link to="realizacje">Realizacje</nuxt-link>
         </li>
         <li>
           <nuxt-link to="contact">Kontakt</nuxt-link>
