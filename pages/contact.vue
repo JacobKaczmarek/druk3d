@@ -4,9 +4,9 @@
       <form class="form" action>
         <h1>Masz pytania?</h1>
         <h3>Chcesz dowiedzieć sie więcej? Pisz do nas.</h3>
-        <input class="sm-input" type="text" name="temat" placeholder="Temat" />
-        <textarea class="big-input" name="tresc" placeholder="Treść" />
-        <button class="send-btn">Send</button>
+        <input id="subject" class="sm-input" type="text" placeholder="Temat" />
+        <textarea id="content" class="big-input" placeholder="Treść" />
+        <button class="send-btn" @click="sendMail()">Send</button>
       </form>
       <img src="../assets/images/Envelope.svg" />
     </div>
@@ -15,7 +15,21 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    sendMail() {
+      const subject = document.querySelector('#subject').value
+      console.log(subject)
+      const content = document.querySelector('#content').value
+      const link = document.createElement('a')
+      link.setAttribute(
+        'href',
+        `mailto:kuba300698@gmail.com?subject=${subject}&body=${content}`
+      )
+      link.click()
+    }
+  }
+}
 </script>
 
 <style scoped>

@@ -6,7 +6,7 @@
         <img class="hand-icon" src="../assets/images/Handshake.svg" />
       </div>
       <div class="cards-container">
-        <Card class="card" v-for="card of cards" :key="card" />
+        <Card v-for="card of cards" :key="card" class="card" />
       </div>
     </div>
     <img class="wave" src="../assets/images/Wave.svg" alt />
