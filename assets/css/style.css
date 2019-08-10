@@ -8,3 +8,16 @@
 html {
   font-family: 'Montserrat', sans-serif;
 }
+
+h1 {
+  font-weight: normal;
+  font-size: 35px;
+  margin-top: 60px;
+}
+
+h3 {
+  color: #363636;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 10px;
+}

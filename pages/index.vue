@@ -3,7 +3,7 @@
     <img class="hero" src="../assets/images/Hero.svg" alt />
     <h1>Druk 3D na który cie stać</h1>
     <h3>Realizuj pomysły nie płacąc fortuny.</h3>
-    <button class="offer-btn">Sprawdz oferte</button>
+    <nuxt-link to="oferta" class="offer-btn">Sprawdz oferte</nuxt-link>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   display: flex;
   align-items: center;
@@ -26,19 +26,6 @@ export default {
   transform: translateX(55px);
 }
 
-h1 {
-  font-weight: normal;
-  font-size: 35px;
-  margin-top: 60px;
-}
-
-h3 {
-  color: #363636;
-  font-weight: normal;
-  font-size: 18px;
-  margin-top: 10px;
-}
-
 .offer-btn {
   font-size: 23px;
   color: white;
@@ -46,5 +33,6 @@ h3 {
   margin: 80px;
   padding: 10px 20px;
   border: none;
+  text-decoration: none;
 }
 </style>

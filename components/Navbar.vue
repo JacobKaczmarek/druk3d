@@ -1,19 +1,19 @@
 <template>
-  <div class="container">
+  <div class="navbar-container">
     <nav>
-      <div class="logo">
+      <nuxt-link to="/" class="logo">
         <span>Druk3D</span>
         <img src="~/assets/images/Logo.svg" alt="Logo" />
-      </div>
+      </nuxt-link>
       <ul>
         <li>
-          <a href>Oferta</a>
+          <nuxt-link to="oferta">Oferta</nuxt-link>
         </li>
         <li>
           <a href>Realizacje</a>
         </li>
         <li>
-          <a href>Kontakt</a>
+          <nuxt-link to="contact">Kontakt</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.navbar-container {
   width: 100vw;
   text-align: center;
 }
@@ -67,5 +67,9 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.nuxt-link-active {
+  color: black;
 }
 </style>
