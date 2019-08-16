@@ -9,6 +9,10 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1 {
   font-weight: normal;
   font-size: 35px;
@@ -20,4 +24,14 @@ h3 {
   font-weight: normal;
   font-size: 18px;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 765px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
 }

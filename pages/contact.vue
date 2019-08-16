@@ -2,20 +2,30 @@
   <div class="offer-wrapper">
     <div class="contact-container">
       <form class="form" action>
-        <h1>Masz pytania?</h1>
+        <h1>
+          Masz pytania?
+          <span>
+            <img class="small-envelope" src="../assets/images/Envelope.svg" />
+          </span>
+        </h1>
         <h3>Chcesz dowiedzieć sie więcej? Pisz do nas.</h3>
         <input id="subject" class="sm-input" type="text" placeholder="Temat" />
         <textarea id="content" class="big-input" placeholder="Treść" />
         <button class="send-btn" @click="sendMail()">Send</button>
       </form>
-      <img src="../assets/images/Envelope.svg" />
+      <img class="big-envelope" src="../assets/images/Envelope.svg" />
     </div>
-    <img class="wave" src="../assets/images/Wave.svg" alt />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from '~/components/Footer'
+
 export default {
+  components: {
+    Footer
+  },
   methods: {
     sendMail() {
       const subject = document.querySelector('#subject').value
@@ -39,14 +49,23 @@ export default {
 .contact-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 80%;
-  height: 60vh;
   margin: 10px auto;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  height: 500px;
+}
+
+.big-envelope {
+  margin-left: 30px;
+}
+
+.small-envelope {
+  display: none;
 }
 
 .sm-input,
@@ -61,16 +80,9 @@ export default {
 
 .big-input {
   width: 700px;
-  height: 500px;
+  height: 400px;
   border: 2px solid #707070;
   text-align: top;
-}
-
-.wave {
-  position: absolute;
-  bottom: -90px;
-  left: 0;
-  width: 100vw;
 }
 
 .send-btn {
@@ -89,5 +101,30 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+@media screen and (max-width: 765px) {
+  .small-envelope {
+    display: inline-block;
+    max-width: 40px;
+    transform: translateY(10px);
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .big-envelope {
+    display: none;
+  }
+
+  .sm-input,
+  .big-input {
+    width: 100%;
+  }
+
+  .big-input {
+    height: 200px;
+  }
 }
 </style>

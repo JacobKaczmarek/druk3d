@@ -13,12 +13,18 @@
       </div>
       <img class="dino" src="../assets/images/dinosaur.png" />
     </div>
-    <img class="wave" src="../assets/images/Wave.svg" alt />
+    <Footer />
   </div>
 </template>
 
 <script>
-export default {}
+import Footer from '~/components/Footer'
+
+export default {
+  components: {
+    Footer
+  }
+}
 </script>
 
 <style scoped>
@@ -48,10 +54,25 @@ ul {
   letter-spacing: 0.1em;
 }
 
-.wave {
-  position: absolute;
-  bottom: -60px;
-  left: 0;
-  width: 100vw;
+@media screen and (max-width: 765px) {
+  .offer-container {
+    margin-top: 20px;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .left-container {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    font-size: 15px;
+    margin-top: 15px;
+    line-height: 1.6;
+  }
+
+  .dino {
+    display: none;
+  }
 }
 </style>

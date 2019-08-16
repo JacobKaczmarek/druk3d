@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="home-container">
     <img class="hero" src="../assets/images/Hero.svg" alt />
     <h1>Druk 3D na który cie stać</h1>
     <h3>Realizuj pomysły nie płacąc fortuny.</h3>
@@ -14,16 +14,17 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.home-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  transform: translateX(20px);
+  overflow: hidden;
 }
 
 .hero {
   margin-top: 50px;
   width: 300px;
-  transform: translateX(55px);
+  transform: translateX(70px);
 }
 
 .offer-btn {

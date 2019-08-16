@@ -15,6 +15,7 @@ export default {
 
 <style scoped>
 .container {
+  width: 100vw;
   display: flex;
   flex-direction: column;
 }

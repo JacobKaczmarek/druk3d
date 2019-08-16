@@ -9,16 +9,18 @@
         <Card v-for="card of cards" :key="card" class="card" />
       </div>
     </div>
-    <img class="wave" src="../assets/images/Wave.svg" alt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Card from '~/components/Card'
+import Footer from '~/components/Footer'
 
 export default {
   components: {
-    Card
+    Card,
+    Footer
   },
   data() {
     return {
@@ -32,6 +34,8 @@ export default {
 .real-container {
   margin: 30px auto;
   width: 80%;
+  height: 70vh;
+  overflow-x: hidden;
 }
 .header {
   display: flex;
@@ -41,6 +45,8 @@ export default {
 
 .cards-container {
   display: flex;
+  overflow-y: visible;
+  height: auto;
 }
 
 .card {
