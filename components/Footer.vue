@@ -1,5 +1,5 @@
 <template>
-  <img :style="style" class="wave" src="../assets/images/Wave.svg" alt />
+  <img class="wave" src="../assets/images/Wave.svg" alt />
 </template>
 
 <script>
@@ -24,5 +24,12 @@ export default {
   position: fixed;
   left: 0;
   width: 100vw;
+  z-index: -1;
+}
+
+@media screen and (max-width: 765px) {
+  .wave {
+    bottom: 0px;
+  }
 }
 </style>

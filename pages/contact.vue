@@ -1,7 +1,7 @@
 <template>
   <div class="offer-wrapper">
     <div class="contact-container">
-      <form class="form" action>
+      <form class="form" @submit="sendMail()">
         <h1>
           Masz pytania?
           <span>
@@ -11,7 +11,7 @@
         <h3>Chcesz dowiedzieć sie więcej? Pisz do nas.</h3>
         <input id="subject" class="sm-input" type="text" placeholder="Temat" />
         <textarea id="content" class="big-input" placeholder="Treść" />
-        <button class="send-btn" @click="sendMail()">Send</button>
+        <button class="send-btn" type="submit">Send</button>
       </form>
       <img class="big-envelope" src="../assets/images/Envelope.svg" />
     </div>
@@ -37,6 +37,7 @@ export default {
         `mailto:kuba300698@gmail.com?subject=${subject}&body=${content}`
       )
       link.click()
+      link.remove()
     }
   }
 }
@@ -94,6 +95,8 @@ export default {
   padding: 10px 20px;
   border: none;
   text-decoration: none;
+  z-index: 1;
+  cursor: pointer;
 }
 
 input:focus,

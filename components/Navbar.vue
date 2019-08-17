@@ -58,6 +58,7 @@ nav {
   font-weight: 600;
   margin: 35px;
   font-size: 20px;
+  width: 100px;
 }
 
 .logo > img {
@@ -103,7 +104,7 @@ a {
     height: 100%;
     width: 100vw;
 
-    z-index: 1;
+    z-index: 2;
     background: #51c4f5;
     margin: auto;
     flex-direction: column;
@@ -125,7 +126,7 @@ a {
     top: 5%;
     right: 5%;
     display: block;
-    z-index: 2;
+    z-index: 3;
   }
 }
 </style>
