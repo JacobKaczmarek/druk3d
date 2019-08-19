@@ -3,7 +3,7 @@
     <img class="hero" src="../assets/images/Hero.svg" alt />
     <h1>Druk 3D na który cie stać</h1>
     <h3>Realizuj pomysły nie płacąc fortuny.</h3>
-    <nuxt-link to="oferta" class="offer-btn">Sprawdz oferte</nuxt-link>
+    <nuxt-link to="oferta" class="btn btn-blue">Sprawdz oferte</nuxt-link>
   </div>
 </template>
 
@@ -16,9 +16,14 @@ export default {
 <style scoped>
 .home-container {
   display: flex;
+  height: 90vh;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+}
+
+.btn {
+  text-decoration: none;
 }
 
 .hero {

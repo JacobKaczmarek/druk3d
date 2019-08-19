@@ -12,7 +12,9 @@
         <input id="mail" class="sm-input" type="email" placeholder="Email" />
         <input id="subject" class="sm-input" type="text" placeholder="Temat" />
         <textarea id="content" class="big-input" placeholder="Treść" />
-        <button class="send-btn" type="button" @click="sendMail()">Send</button>
+        <button class="btn btn-blue" type="button" @click="sendMail()">
+          Send
+        </button>
       </form>
       <img class="big-envelope" src="../assets/images/Envelope.svg" />
     </div>
@@ -106,24 +108,15 @@ export default {
   text-align: top;
 }
 
-.send-btn {
-  font-size: 23px;
-  color: white;
-  background: #51c4f5;
-  width: 100px;
-  margin-top: 30px;
-  padding: 10px 20px;
-  border: none;
-  text-decoration: none;
-  z-index: 1;
-  cursor: pointer;
-}
-
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
   outline: none;
+}
+
+.btn {
+  width: 200px;
 }
 
 @media screen and (max-width: 765px) {

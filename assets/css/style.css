@@ -26,6 +26,56 @@ h3 {
   margin-top: 10px;
 }
 
+.btn {
+  background: transparent;
+  position: relative;
+  border: 2px solid;
+  padding: 15px 50px;
+  margin-top: 30px;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.btn:active {
+  outline: none;
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: none;
+  z-index: -1;
+  transition: 0.3s ease;
+}
+
+.btn:hover::before {
+  transform: translate(5px, 5px);
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn-blue {
+  border-color: #51c4f5;
+}
+
+.btn-blue:hover::before {
+  background: #51c4f5;
+}
+
 @media screen and (max-width: 765px) {
   h1 {
     font-size: 25px;
