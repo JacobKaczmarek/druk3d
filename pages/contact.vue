@@ -1,7 +1,7 @@
 <template>
   <div class="offer-wrapper">
     <div class="contact-container">
-      <form class="form" @submit="sendMail()">
+      <form class="form">
         <h1>
           Masz pytania?
           <span>
@@ -9,9 +9,10 @@
           </span>
         </h1>
         <h3>Chcesz dowiedzieć sie więcej? Pisz do nas.</h3>
+        <input id="mail" class="sm-input" type="email" placeholder="Email" />
         <input id="subject" class="sm-input" type="text" placeholder="Temat" />
         <textarea id="content" class="big-input" placeholder="Treść" />
-        <button class="send-btn" type="submit">Send</button>
+        <button class="send-btn" type="button" @click="sendMail()">Send</button>
       </form>
       <img class="big-envelope" src="../assets/images/Envelope.svg" />
     </div>
@@ -20,6 +21,9 @@
 </template>
 
 <script>
+import Axios from 'axios'
+import Swal from 'sweetalert2'
+
 import Footer from '~/components/Footer'
 
 export default {
@@ -29,15 +33,31 @@ export default {
   methods: {
     sendMail() {
       const subject = document.querySelector('#subject').value
-      console.log(subject)
+      const mail = document.querySelector('#mail').value
       const content = document.querySelector('#content').value
-      const link = document.createElement('a')
-      link.setAttribute(
-        'href',
-        `mailto:kuba300698@gmail.com?subject=${subject}&body=${content}`
-      )
-      link.click()
-      link.remove()
+      // Local mail client version
+      // const link = document.createElement('a')
+      // link.setAttribute(
+      //   'href',
+      //   `mailto:kuba300698@gmail.com?subject=${subject}&body=${content}`
+      // )
+      // link.click()
+      // link.remove()
+      const data = {
+        mail,
+        subject,
+        body: content
+      }
+      console.log(data)
+      Axios.post('http://localhost:3001/mail', data).then((res) => {
+        if (res) {
+          Swal.fire({ type: 'success', title: 'Wiadomość wysłana!' })
+          document.querySelector('Form').reset()
+        } else {
+          Swal.fire({ type: 'error', title: 'Ups! Coś poszło nie tak' })
+        }
+      })
+      Swal.fire({ type: 'info', title: 'Wysyłanie' })
     }
   }
 }

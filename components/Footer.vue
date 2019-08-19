@@ -1,5 +1,7 @@
 <template>
-  <img class="wave" src="../assets/images/Wave.svg" alt />
+  <div class="wave-container">
+    <img class="wave" src="../assets/images/Wave.svg" alt />
+  </div>
 </template>
 
 <script>
@@ -20,9 +22,17 @@ export default {
 </script>
 
 <style scoped>
-.wave {
+.wave-container {
   position: fixed;
+  top: 0;
   left: 0;
+  height: 100vh;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: -50px;
   width: 100vw;
   z-index: -1;
 }
